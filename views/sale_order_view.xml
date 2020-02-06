@@ -1,0 +1,17 @@
+<odoo>
+	<record id="order_line_uom_customize" model="ir.ui.view"> 
+    	<field name="name">order.line</field>
+    	<field name="model">sale.order</field>
+    	<field name="type">tree</field>
+    	<field name="inherit_id" ref="sale.view_order_form"/>
+    	<field name="arch" type="xml">
+      		
+          <xpath expr="//tree/field[@name='product_uom']" position="after">
+            <field name="multi_uom_product" invisible="1"/>
+          </xpath>
+          <xpath expr="//tree/field[@name='product_uom']" position="replace">
+            <field name="product_uom" string="UoM" options="{'no_create_edit':True,'no_open':True}" readonly='0' domain="[('id','=',multi_uom_product)]"/>
+          </xpath>
+      	</field>
+    </record>
+</odoo>

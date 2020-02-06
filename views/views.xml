@@ -1,0 +1,15 @@
+<odoo>
+  <record id="multi_uom_in_product" model="ir.ui.view">
+    <field name="name">multi_uom_in_product</field>
+    <field name="model">product.template</field>
+    <field name="inherit_id" ref="product.product_template_only_form_view"/>
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='uom_id']" position="before">
+          <field name="for_domain" invisible="1"/>
+      </xpath>
+       <xpath expr="//field[@name='uom_id']" position="after">
+          <field name="multi_uom_product" options="{'no_create_edit':True}" widget="many2many_tags" domain="[('id','in',for_domain)]"/>
+        </xpath>
+    </field>
+  </record> 
+</odoo>
