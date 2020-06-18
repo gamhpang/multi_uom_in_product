@@ -6,6 +6,4 @@ Usage -->
   not assinged to product.
   
 Contributer -->
-  * Gam Hpang gam.hpang@safecoms.com
-  
- Maintainer --> Safecoms
+  * Gam Hpang
