@@ -3,9 +3,8 @@
     "name" : "multi_uom_in_product",
     "summary" : "Allow to set multi UoM in product",
     "version" : "13.0",
-    "author" : "Gam Hpang, Safecoms",
+    "author" : "Gam Hpang",
     "category" : "product",
-    "website" : "https://safecoms.com",
     "depends" : ["product","uom","sale"],
     "data" : [
         "views/views.xml",
